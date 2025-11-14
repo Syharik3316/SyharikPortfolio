@@ -363,11 +363,27 @@ body {
   align-items: start;
 }
 
+.about-text {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
 .about-text p {
   font-size: 1.1rem;
   line-height: 1.8;
   margin-bottom: 20px;
   color: #e0e0e0;
+}
+
+.skills-section {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .skills-section h3 {
@@ -862,6 +878,22 @@ body {
   .stat-label {
     font-size: 0.9rem;
   }
+}
+
+/* Футер */
+.site-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(26, 26, 46, 0.9);
+  backdrop-filter: blur(10px);
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 20px;
+  text-align: center;
+  font-size: 14px;
 }
 
 /* Стили для аватара */

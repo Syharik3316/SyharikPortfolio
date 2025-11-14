@@ -102,23 +102,14 @@ const HomePage = ({ setCurrentPage, siteData }) => {
             <div className="skills-preview">
               {siteData.skills?.slice(0, 6).map((skill, index) => (
                 <span key={index} className="skill-tag">{skill}</span>
-              )) || (
-                <>
-                  <span className="skill-tag">Python</span>
-                  <span className="skill-tag">Node.js</span>
-                  <span className="skill-tag">HTML</span>
-                  <span className="skill-tag">CSS</span>
-                  <span className="skill-tag">Dota 2</span>
-                  <span className="skill-tag">DeepSeek</span>
-                </>
-              )}
+              ))}
             </div>
           </div>
           
           <div className="section">
             <h3>Последние проекты</h3>
             <div className="projects-preview">
-              {siteData.projects?.slice(0, 3).map((project, index) => (
+              {siteData.projects?.slice(0, 4).map((project, index) => (
                 <div
                   key={index}
                   className="project-card-mini"
@@ -128,22 +119,7 @@ const HomePage = ({ setCurrentPage, siteData }) => {
                   <h4>{project.title}</h4>
                   <p>{project.description}</p>
                 </div>
-              )) || (
-                <>
-                  <div className="project-card-mini">
-                    <h4>SyharikFW</h4>
-                    <p>Приложение firewall для Linux</p>
-                  </div>
-                  <div className="project-card-mini">
-                    <h4>SyharikDP</h4>
-                    <p>Автоматическое подключение к ОС</p>
-                  </div>
-                  <div className="project-card-mini">
-                    <h4>SyharikHost</h4>
-                    <p>Хостирование ваших файлов!</p>
-                  </div>
-                </>
-              )}
+              ))}
             </div>
           </div>
           
@@ -172,7 +148,7 @@ const HomePage = ({ setCurrentPage, siteData }) => {
                 </div>
                 <div className="stat-item">
                   <div className="stat-number">люблю</div>
-                  <div className="stat-label">хз, сухарики</div>
+                  <div className="stat-label">сухарики</div>
                 </div>
             </div>
           </div>
@@ -266,29 +242,13 @@ const AboutPage = ({ siteData }) => {
         <div className="about-content">
           <div className="about-text">
             {siteData.aboutText?.map((paragraph, index) => (
-              <p key={index}>{paragraph}</p>
-            )) || (
-              <>
-                <p>
-                  Привет! Моё настоящее имя - Данил. Проживаю в городе Ростов-на-Дону.
-                  В настоящее время работаю на должности системного администратора.
-                  Не смотря на мою специальность, я увлекаюсь программированием и часто участвую на хакатонах или форумах.
-                  Участвовал в таких хакатонах как: Хакатон Осень 2024, Весна 2025, Осень 2025. Hakaton DDOS-Guard, Human Hack Pro 2025 и Хакатон при РИНХ
-                  В данный момент учусь в РКСИ на втором курсе.
-                </p>
-                <p>
-                  По жизни люблю новые знакомства, любимый цвет - фиолетовый и красный
-                  Аниме не смотрю. Но единственное любимое есть. Это Girls und Panzer
-                  Любимый исполнитель - pyrokinesis.
-                  К сожалению сейчас имею мало свободного времени в связи с учёбой и работой одновременно D:
-                </p>
-              </>
-            )}
+              paragraph && <p key={index}>{paragraph}</p>
+            ))}
           </div>
           <div className="skills-section">
             <h3>Навыки</h3>
             <div className="skills-grid">
-              {siteData.skills.map((skill, index) => (
+              {siteData.skills?.map((skill, index) => (
                 <div key={index} className="skill-item">{skill}</div>
               ))}
             </div>
@@ -389,45 +349,6 @@ const ContactPage = ({ siteData }) => {
                 </div>
               </div>
             ))}
-            {(!siteData.contactInfo || !Array.isArray(siteData.contactInfo) || siteData.contactInfo.length === 0) && (
-              <>
-                <div className="contact-item">
-                  <div className="contact-icon">📧</div>
-                  <div className="contact-details">
-                    <h4>Email</h4>
-                    <a href="mailto:syharik3316@mail.ru">syharik3316@mail.ru</a>
-                  </div>
-                </div>
-                <div className="contact-item">
-                  <div className="contact-icon">💬</div>
-                  <div className="contact-details">
-                    <h4>Telegram</h4>
-                    <a href="https://t.me/syharik3316" target="_blank" rel="noreferrer noopener">@syharik3316</a>
-                  </div>
-                </div>
-                <div className="contact-item">
-                  <div className="contact-icon">🐙</div>
-                  <div className="contact-details">
-                    <h4>GitHub</h4>
-                    <a href="https://github.com/syharik3316" target="_blank" rel="noreferrer noopener">github.com/syharik3316</a>
-                  </div>
-                </div>
-                <div className="contact-item">
-                  <div className="contact-icon">💬</div>
-                  <div className="contact-details">
-                    <h4>ВКонтакте</h4>
-                    <a href="https://vk.com/syharik3316" target="_blank" rel="noreferrer noopener">vk.com/syharik3316</a>
-                  </div>
-                </div>
-                <div className="contact-item">
-                  <div className="contact-icon">🎮</div>
-                  <div className="contact-details">
-                    <h4>Steam</h4>
-                    <a href="https://steamcommunity.com/id/Syharik3316" target="_blank" rel="noreferrer noopener">steamcommunity.com/id/Syharik3316</a>
-                  </div>
-                </div>
-              </>
-            )}
           </div>
         </div>
       </div>
@@ -459,7 +380,7 @@ function App() {
      'Любимый исполнитель - pyrokinesis.',
       'К сожалению сейчас имею мало свободного времени в связи с учёбой и работой одновременно D:'
     ],
-    skills: ['Python', 'Node.js', 'HTML', 'CSS', 'Dota 2', 'DeepSeek'],
+    skills: ['Python', 'Node.js', 'HTML/CSS', 'Docker', 'Dota 2', 'DeepSeek'],
     contactInfo: [
       { id: 1, type: 'Email', value: 'syharik3316@mail.ru', icon: '📧' },
       { id: 2, type: 'Telegram', value: '@syharik3316', icon: '💬' },
@@ -479,11 +400,11 @@ function App() {
       },
       {
         id: 2,
-        title: "SyharikDP",
-        description: "Автоматическое подключение к ОС",
-        tech: ["Python", "tkinter"],
+        title: "SyharikDP V2.0",
+        description: "Автоматическое подключение к ОС. Улучшенная версия",
+        tech: ["C++"],
         status: "Завершён",
-        url: "https://github.com/Syharik3316/Desktop2Proxy",
+        url: "https://github.com/Syharik3316/SyharikDP_V2.0",
         hasLink: true
       },
       {
@@ -494,11 +415,38 @@ function App() {
         status: "Завершён",
         url: "https://syharikhost.ru",
         hasLink: true
+      },
+      {
+        id: 4,
+        title: "SyharikCheck",
+        description: "Проверка интернет ресурсов на доступость",
+        tech: ["Go", "React", "Redis", "PostgreSQL", "Docker"],
+        status: "Завершен/В разработке",
+        url: "https://syharik.online",
+        hasLink: true
+      },
+      {
+        id: 5,
+        title: "SyharikDP",
+        description: "Автоматическое подключение к ОС",
+        tech: ["Python", "tkinter"],
+        status: "Завершён",
+        url: "https://github.com/Syharik3316/Desktop2Proxy",
+        hasLink: true
+      },
+      {
+        id: 6,
+        title: "SyharikBot",
+        description: "Удобное управление вашим личным VDS с помощью Telegram-бота",
+        tech: ["Python"],
+        status: "Завершён",
+        url: "https://github.com/Syharik3316/syharikbot",
+        hasLink: true
       }
     ],
     avatarImage: 'https://syharikhost.ru/uploads/68f241f395fa9_1760707059.jpg',
     gallery: [],
-    backgroundImage: 'https://syharikhost.ru/uploads/68f24210c6904_1760707088.png',
+    backgroundImage: 'https://syharikhost.ru/uploads/690d0ebf66c6d_1762463423.jpg',
     siteSettings: {
       siteName: 'syharik3316',
       menuItems: {
@@ -513,16 +461,28 @@ function App() {
 
   // Используем только статические данные без локального хранилища
 
-  // Загружаем галерею с сервера
+  // Загружаем галерею из статичного файла (без собственного API)
   useEffect(() => {
     const load = async () => {
       try {
-        const apiBase = process.env.REACT_APP_API_URL || 'http://syharik3316.online';
-        const res = await fetch(`${apiBase}/api/gallery`);
-        if (res.ok) {
-          const data = await res.json();
-          setGalleryData(data);
-        }
+        // 1) Пытаемся получить динамический список через PHP (обновляется при каждом запросе)
+        try {
+          const resPhp = await fetch('gallery.php', { cache: 'no-store' });
+          if (resPhp.ok) {
+            const dataPhp = await resPhp.json();
+            setGalleryData(dataPhp);
+            return;
+          }
+        } catch (_) {}
+
+        // 2) Фолбэк на статичный список, сгенерированный при сборке
+        try {
+          const res = await fetch('gallery.json', { cache: 'no-store' });
+          if (res.ok) {
+            const data = await res.json();
+            setGalleryData(data);
+          }
+        } catch (_) {}
       } catch (e) {
         // тихо падаем — просто пустая галерея
       }
@@ -581,6 +541,15 @@ function App() {
       <main className="main-content">
         {renderPage()}
       </main>
+
+      <footer className="site-footer">
+        <div className="footer-content">
+          <div>
+            © {new Date().getFullYear()} {siteData.siteSettings?.siteName || 'syharik3316'}. Все права защищены.
+            <p class="footer-email">e-mail: <a href="mailto:admin@syharik.ru" class="email-link">admin@syharik.ru</a></p>
+          </div>
+        </div>
+      </footer>
 
       {/* Модальное окно для просмотра галереи */}
       {showGalleryModal && selectedGalleryItem && (
