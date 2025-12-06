@@ -449,7 +449,7 @@ function App() {
     gallery: [],
     backgroundImage: 'https://syharikhost.ru/download.php?token=d9157236-6211-47f6-87e2-233044e880f9',
     siteSettings: {
-      siteName: 'Syharik3316',
+      siteName: 'Устаревший сайт!!!',
       menuItems: {
         home: 'Главная',
         about: 'О себе',
