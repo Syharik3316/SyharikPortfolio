@@ -53,8 +53,7 @@ npm install
 
 npm run build --max_old_space_size=4096
 
-🌐 Деплой
-Frontend:
+# 🌐 ДеплойFrontend:
 
 Соберите проект: npm run build
 
