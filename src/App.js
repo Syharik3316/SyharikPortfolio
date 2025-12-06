@@ -20,7 +20,7 @@ const Navigation = ({ currentPage, setCurrentPage, siteData }) => {
             onClick={() => setCurrentPage('home')}
             title="Перейти на главную"
           >
-            <span className="logo-text">{siteData.siteSettings?.siteName || 'syharik3316'}</span>
+            <span className="logo-text">{siteData.siteSettings?.siteName || 'Устаревший сайт!!!'}</span>
           </button>
         </div>
         <ul className="nav-menu">
@@ -369,6 +369,7 @@ function App() {
     title: 'Системный администратор',
     description: 'Сис админ, увлечённый всякими питонами и нейронками',
     aboutText: [
+      'Устаревший сайт!!! Информация не обновляется.',
       'Привет! Моё настоящее имя - Данил. Проживаю в городе Ростов-на-Дону.',
       'В настоящее время работаю на должности системного администратора.',
       'Не смотря на мою специальность, я увлекаюсь программированием и часто участвую на хакатонах или форумах.',
