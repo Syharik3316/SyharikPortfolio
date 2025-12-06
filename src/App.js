@@ -391,11 +391,11 @@ function App() {
     projects: [
       {
         id: 1,
-        title: "SyharikFW",
+        title: "SyharikFW V2.0",
         description: "Приложение firewall для Linux",
-        tech: ["Node.js", "Python", "C"],
-        status: "Завершен/В разработке",
-        url: "https://github.com/Syharik3316/SyharikFW-V1.1-Beta",
+        tech: ["JS", "C", "HTML", "CSS"],
+        status: "Завершен",
+        url: "https://github.com/Syharik3316/SyharikFW-V2.0",
         hasLink: true
       },
       {
@@ -403,7 +403,7 @@ function App() {
         title: "SyharikDP V2.0",
         description: "Автоматическое подключение к ОС. Улучшенная версия",
         tech: ["C++"],
-        status: "Завершён",
+        status: "Завершен",
         url: "https://github.com/Syharik3316/SyharikDP_V2.0",
         hasLink: true
       },
@@ -412,7 +412,7 @@ function App() {
         title: "SyharikHost",
         description: "Хостинг для ваших файлов",
         tech: ["PHP", "JS", "CSS", "HTML"],
-        status: "Завершён",
+        status: "Завершен",
         url: "https://syharikhost.ru",
         hasLink: true
       },
@@ -420,9 +420,9 @@ function App() {
         id: 4,
         title: "SyharikCheck",
         description: "Проверка интернет ресурсов на доступость",
-        tech: ["Go", "React", "Redis", "PostgreSQL", "Docker"],
-        status: "Завершен/В разработке",
-        url: "https://syharik.online",
+        tech: ["Go", "React", "Redis", "PostgreSQL", "Docker", "C++"],
+        status: "В разработке",
+        url: "https://github.com/Syharik3316/SyharikCheck",
         hasLink: true
       },
       {
@@ -430,7 +430,7 @@ function App() {
         title: "SyharikDP",
         description: "Автоматическое подключение к ОС",
         tech: ["Python", "tkinter"],
-        status: "Завершён",
+        status: "Завершен",
         url: "https://github.com/Syharik3316/Desktop2Proxy",
         hasLink: true
       },
@@ -439,16 +439,16 @@ function App() {
         title: "SyharikBot",
         description: "Удобное управление вашим личным VDS с помощью Telegram-бота",
         tech: ["Python"],
-        status: "Завершён",
+        status: "Завершен",
         url: "https://github.com/Syharik3316/syharikbot",
         hasLink: true
       }
     ],
-    avatarImage: 'https://syharikhost.ru/uploads/68f241f395fa9_1760707059.jpg',
+    avatarImage: 'https://syharikhost.ru/download.php?token=222a6100-0af3-4cc1-be53-e434e19395ee',
     gallery: [],
-    backgroundImage: 'https://syharikhost.ru/uploads/690d0ebf66c6d_1762463423.jpg',
+    backgroundImage: 'https://syharikhost.ru/download.php?token=d9157236-6211-47f6-87e2-233044e880f9',
     siteSettings: {
-      siteName: 'syharik3316',
+      siteName: 'Syharik3316',
       menuItems: {
         home: 'Главная',
         about: 'О себе',
@@ -458,8 +458,6 @@ function App() {
       }
     }
   });
-
-  // Используем только статические данные без локального хранилища
 
   // Загружаем галерею из статичного файла (без собственного API)
   useEffect(() => {
